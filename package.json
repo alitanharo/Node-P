@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "start": "  nodemon app.js",
+    "start": "nodemon app.js",
     "debug": "DEBUG=* nodemon app.js"
   },
   "author": "Ali",
@@ -14,6 +14,7 @@
     "debug": "^4.3.4",
     "ejs": "^3.1.8",
     "express": "4.17",
+    "mongodb": "^5.0.0",
     "nodemon": "^2.0.20"
   },
   "nodemonConfig": {
