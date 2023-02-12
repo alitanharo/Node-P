@@ -4,7 +4,14 @@ const sessions = require('../data/post.json')
 const sessionsRouter = express.Router();
 const { MongoClient,ObjectId } = require('mongodb')
 
-
+sessionsRouter.use((req,res,next)=>{
+    if(req.user){
+        next()
+    }
+    else{
+        res.redirect('/auth/signin')
+    }
+})
 
 sessionsRouter.route('/').get((req, res) => {
     const url =
